@@ -1,0 +1,34 @@
+class Solution {
+public:
+    int differenceOfSums(int n, int m) {
+        int num1=0, num2=0;
+        vector <int> values_n;
+        vector <int> values_m;
+        for (int i = 1; i < n+1; i++)
+        {
+           if (i%m!=0)
+           {
+            
+            values_m.push_back(i);
+            
+           }
+           else {
+
+            values_n.push_back(i);
+           }
+           
+        }
+
+        for (auto j= values_m.begin(); j != values_m.end(); j++)
+        {
+            num1+= *j;
+        }
+        
+        for (auto c= values_n.begin(); c != values_n.end(); c++)
+        {
+            num2+= *c;
+        }
+        
+        return (num1 - num2);
+    }
+};
