@@ -1,0 +1,21 @@
+class Solution {
+public:
+    int missingNumber(vector<int>& nums) {
+        int i=0,max = nums.size();
+        int sum = 0 ;
+        int sum2;
+
+        while ( i < nums.size())
+        {
+            
+        
+            sum+= nums[i];
+            i++;
+        }
+        sum2 = (max*(max+1)/2);
+
+        return (sum2-sum);
+        
+        
+    }
+};
